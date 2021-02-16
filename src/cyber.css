@@ -1,0 +1,68 @@
+
+.cyber,.cyber::after{
+  width: 200px;
+  height: 60px;
+  line-height:60px;
+  font-size: 36px;
+  background:linear-gradient(45deg,transparent 5%,#ff012c 5%);
+  border:0px;
+  color:rgb(250, 213, 3);
+  box-shadow:6px 0px 0px #00e6f6;
+  outline:transparent;
+  position: relative;
+  text-align: center;
+}
+.cyber::after{
+  --slice-0:inset(50% 50% 50% 50%);
+  --slice-1:inset(90% -3px 0 0);
+  --slice-2:inset(50% -3px 40% 0);
+  --slice-3:inset(10% -3px 85% 0);
+  --slice-4:inset(40% -3px 43% 0);
+  --slice-5:inset(90% -3px 5% 0);
+  content: attr(data-content);
+  display:block;
+  position: absolute;
+  top:0px;
+  left:0;
+  bottom:0;
+  line-height:86px;
+  background:linear-gradient(45deg,transparent 3%,#00e6f6 3%,#00e6f6 5%,#ff013c 5%);
+  text-shadow:-3px -3px 0px #f8f005,3px 3px 0px #00e6f6;
+  clip-path:var(--slice-1);
+  transform:translate(-10px,5px);
+  animation:glitch 2s infinite;
+  animation-timing-function:steps(3, end)
+}
+
+@keyframes glitch{
+  0%{
+    clip-path: var(--slice-1);
+    transform: translate(-2px,-0px);
+  }
+  10%{
+    clip-path: var(--slice-3);
+    transform: translate(2px,-1px);
+  }
+  20%{
+    clip-path: var(--slice-2);
+    transform: translate(-2px,0px);
+  }
+  30%{
+    clip-path: var(--slice-5);
+    transform: translate(0px,1px);
+  }
+  40%{
+    clip-path: var(--slice-4);
+    transform: translate(-1px,0px);
+  }
+  50%{
+    clip-path: var(--slice-2);
+    transform: translate(1px,0px);
+  }
+  60%{
+    clip-path: var(--slice-3);
+    transform: translate(-1px,-2px);
+  }
+
+
+}

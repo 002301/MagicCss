@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagicCss</title>
+  <link rel="stylesheet" href="./magic.min.css">
+</head>
+<body>
+  <ul class="flex">
+    <li>
+      <div class="cyber" data-content="cyberButton">
+        cyberButton
+      </div>
+    </li>
+    <li>
+      <div class="style">
+        <div class="tiktok" data-content="TiktokText">
+          <span>TiktokText</span> 
+        </div>
+        <div class="shake" style="--shake-offset: 2px; --shake-height: 30px;">
+          <div class="tiktok " data-content="TiktokText">
+            <span>TiktokText</span>
+          </div>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div class="progress-outer">
+        <div class="progress-enter">
+          <div class="progress-bg" style="--width-bg:80%;"></div>
+        </div>
+        <span>80%</span>
+      </div>
+    </li>
+  </ul>
+
+  <style>
+    html,body{margin: 0;padding:0;background:#000}
+    .flex{
+      /* display: flex; */
+      /* justify-content: center; */
+      width: 100%;
+      flex-direction:column;
+    }
+    li{
+      position: relative;
+      margin-bottom:30px;
+      text-align: center;
+      
+    }
+    li>div{
+        margin:0 auto;
+      }
+    .style{
+      position: relative;
+      width: 300px;
+    }
+    .cyber,.cyber::after{
+      width: 300px;
+    }
+  </style>
+</body>
+</html>

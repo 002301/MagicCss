@@ -1,0 +1,75 @@
+.tiktok  {
+  position:relative;
+  width: 200px;
+  color: #fff;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+  font-weight: 700;
+  animation: debounce 0.5s steps(3) infinite;
+  
+}
+.tiktok span {
+  position: relative;
+  color: #FFF;
+  z-index: 3;
+  opacity: .9;
+}
+.tiktok::before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  color: #00f5e7;
+  opacity: .7;
+  z-index: 1;
+  content: attr(data-content);
+}
+
+.tiktok::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  opacity: .7;
+  color: #ff0068;
+  z-index: 0;
+  content: attr(data-content);
+}
+
+.shake {
+  position: absolute;
+  z-index: 9;
+  top:0px;
+  width:inherit;
+  left: var(--shake-offset);
+  height: var(--shake-height);
+  overflow: hidden;
+  background:#000;
+  animation: shake-body 1s steps(3) infinite;
+}
+.shake .tiktok {
+  animation: shake-content 1s steps(3) infinite;
+}
+@keyframes shake-body {
+  0%   {
+    top: 0;
+  }
+  60% {
+    top: 60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+
+@keyframes shake-content {
+  0%   {
+    margin-top: 0;
+  }
+  60% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: -60px;
+  }
+}
