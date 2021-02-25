@@ -16,6 +16,12 @@
     background-size: 16px 16px;
     animation: panoramic 20s linear infinite;
   }
+   .progress-bg span{
+     font-size: 10px;
+     line-height: 12px;
+     display:block;
+     color: #000;
+   }
   @keyframes panoramic{
     to {
       background-position: 200% 0;

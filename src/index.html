@@ -10,29 +10,52 @@
 <body>
   <ul class="flex">
     <li>
-      <div class="cyber" data-content="cyberButton">
-        cyberButton
-      </div>
+        <div class="cont">
+          <div class="cyber" data-content="cyberButton">
+            cyberButton
+          </div>
+        </div>      
     </li>
     <li>
-      <div class="style">
-        <div class="tiktok" data-content="TiktokText">
-          <span>TiktokText</span> 
-        </div>
-        <div class="shake" style="--shake-offset: 2px; --shake-height: 30px;">
-          <div class="tiktok " data-content="TiktokText">
-            <span>TiktokText</span>
+      <div class="cont">
+        <div class="style">
+          <div class="tiktok" data-content="TiktokText">
+            <span>TiktokText</span> 
+          </div>
+          <div class="shake" style="--shake-offset: 2px; --shake-height: 30px;">
+            <div class="tiktok " data-content="TiktokText">
+              <span>TiktokText</span>
+            </div>
           </div>
         </div>
-        
       </div>
     </li>
     <li>
-      <div class="progress-outer">
-        <div class="progress-enter">
-          <div class="progress-bg" style="--width-bg:80%;"></div>
+      <div class="cont">
+        <div class="progress-outer" style="--width-bg:300px">
+          <div class="progress-enter">
+            <div class="progress-bg" style="--width-bg:50%;"><span>50%</span></div>
+          </div>
         </div>
-        <span>80%</span>
+      </div>
+      
+    </li>
+    <li>
+      <div class="cont">
+        <div class="rainbow" style="--height:100px;"></div>
+      </div>
+    </li>
+    <li>
+      <div class="cont">
+        <div class="rainbow-line" style="--height:100px;"></div>
+      </div>
+    </li>
+    <li>
+      <div class="cont">
+          <div class="rainbow rainbow-txt" style="--height:100px;">
+            rainbow
+          </div>
+        
       </div>
     </li>
   </ul>
@@ -40,27 +63,35 @@
   <style>
     html,body{margin: 0;padding:0;background:#000}
     .flex{
-      /* display: flex; */
-      /* justify-content: center; */
       width: 100%;
-      flex-direction:column;
+      display:flex;
+      flex-wrap: wrap;
     }
     li{
       position: relative;
-      margin-bottom:30px;
       text-align: center;
-      
+      width: 320px;
+      height: 320px;
+      margin:10px;
+      /* padding:10px; */
+      border:1px solid #fff;
     }
-    li>div{
-        margin:0 auto;
-      }
+    li>.cont{
+      position: absolute;
+      width: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
     .style{
       position: relative;
       width: 300px;
+      height: auto;
     }
     .cyber,.cyber::after{
       width: 300px;
     }
+
   </style>
 </body>
 </html>
