@@ -4,26 +4,67 @@
     overflow: hidden;
     position: relative; 
   }    
-  .progress-enter {  
+  .progress-outer>.progress-enter {  
     height: inherit;
     background: rgba(180, 160, 120, .2); 
   }
-  .progress-bg {
+  .progress-outer .progress-bg {
     width: var(--width-bg); height: inherit;
     border-radius: 6px; 
     background: repeating-linear-gradient(-45deg, #D9CFBB  25%, #C3B393 0, #C3B393 50%,
                     #D9CFBB 0, #D9CFBB 75%, #C3B393 0);
     background-size: 16px 16px;
-    animation: panoramic 20s linear infinite;
+    animation: progressAni 10s linear infinite;
   }
-   .progress-bg span{
-     font-size: 10px;
-     line-height: 12px;
-     display:block;
-     color: #000;
-   }
-  @keyframes panoramic{
-    to {
-      background-position: 200% 0;
-    }
+  .progress-outer .progress-bg::after{
+    position: absolute;
+    content: counter(pcount);
+    animation: pcounter 10s linear infinite;
+    counter-reset:pcount 0;
+    line-height: 12px;
   }
+  @keyframes progressAni{
+  0%{
+    width: 0%;
+    background-position:0 0;
+  }
+  100%{
+    width: 100%;
+    background-position: 200% 0;
+  }
+}
+  @keyframes pcounter {
+  0% {
+    counter-increment: pcount 0;
+  }
+  10% {
+    counter-increment: pcount 10;
+  }
+  20% {
+    counter-increment: pcount 20;
+  }
+  30% {
+    counter-increment: pcount 30;
+  }
+  40% {
+    counter-increment: pcount 40;
+  }
+  50% {
+    counter-increment: pcount 50;
+  }
+  60% {
+    counter-increment: pcount 60;
+  }
+  70% {
+    counter-increment: pcount 70;
+  }
+  80% {
+    counter-increment: pcount 80;
+  }
+  90% {
+    counter-increment: pcount 90;
+  }
+  100% {
+    counter-increment: pcount 100;
+  }
+}

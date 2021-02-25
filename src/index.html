@@ -10,13 +10,32 @@
 <body>
   <ul class="flex">
     <li>
+      <header>class: linearBtn</header>
+        <div class="cont">
+          <div class="linearBtn">
+            linearBtn
+          </div>
+        </div> 
+    </li>
+    <li>
+      <header>class: gloading</header>
+        <div class="cont">
+          <div class="gloading" data-content="cyberButton">
+            <div class="progress-bg">
+                <div class="progress" style="--width:50%"></div>
+            </div>
+            <div class="gloading-tit">Loading</div>
+            <div class="gloading-num">%</div>
+          </div>
+        </div> 
+    </li>
+    <li>
       <header>class: cyber</header>
         <div class="cont">
           <div class="cyber" data-content="cyberButton">
             cyberButton
           </div>
         </div> 
-        <span>clip-path</span>
     </li>
     <li>
       <header>class: tiktok</header>
@@ -32,32 +51,29 @@
           </div>
         </div>
       </div>
-      <span>::after and ::before</span>
     </li>
+
     <li>
       <header>class: progress-outer</header>
       <div class="cont">
         <div class="progress-outer" style="--width-bg:300px">
           <div class="progress-enter">
-            <div class="progress-bg" style="--width-bg:50%;"><span>50%</span></div>
+            <div class="progress-bg" style="--width-bg:50%;"></div>
           </div>
         </div>
       </div>
-      <span>repeating-linear-gradient</span>
     </li>
     <li>
       <header>class: rainbow</header>
       <div class="cont">
         <div class="rainbow" style="--height:100px;"></div>
       </div>
-      <span>repeating-linear-gradient</span>
     </li>
     <li>
       <header>class: rainbow-line</header>
       <div class="cont">
         <div class="rainbow-line" style="--height:100px;"></div>
       </div>
-      <span>repeating-linear-gradient</span>
     </li>
     <li>
       <header>class: rainbow rainbow-txt</header>
@@ -66,7 +82,6 @@
             rainbow
           </div>
       </div>
-      <span>repeating-linear-gradient</span>
     </li>
   </ul>
 
@@ -83,15 +98,14 @@
       width: 320px;
       height: 320px;
       margin:10px;
-      /* padding:10px; */
       border:1px solid #fff;
     }
     li>.cont{
       position: absolute;
       width: 95%;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
     li>header{
       position: absolute;
@@ -99,15 +113,6 @@
       width: 100%;
       left:0;
       color:#c5c3c3;
-    }
-    li>span{
-      position: absolute;
-      width: 100%;
-      line-height: 50px;
-      height:50px;
-      bottom:0;
-      left:0;
-      color:#6d6d6d;
     }
     .style{
       position: relative;
