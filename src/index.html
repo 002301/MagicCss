@@ -10,6 +10,7 @@
 <body>
   <ul class="flex">
     <li>
+      <header>class: cyber</header>
         <div class="cont">
           <div class="cyber" data-content="cyberButton">
             cyberButton
@@ -18,6 +19,7 @@
         <span>clip-path</span>
     </li>
     <li>
+      <header>class: tiktok</header>
       <div class="cont">
         <div class="style">
           <div class="tiktok" data-content="TiktokText">
@@ -33,6 +35,7 @@
       <span>::after and ::before</span>
     </li>
     <li>
+      <header>class: progress-outer</header>
       <div class="cont">
         <div class="progress-outer" style="--width-bg:300px">
           <div class="progress-enter">
@@ -43,18 +46,21 @@
       <span>repeating-linear-gradient</span>
     </li>
     <li>
+      <header>class: rainbow</header>
       <div class="cont">
         <div class="rainbow" style="--height:100px;"></div>
       </div>
       <span>repeating-linear-gradient</span>
     </li>
     <li>
+      <header>class: rainbow-line</header>
       <div class="cont">
         <div class="rainbow-line" style="--height:100px;"></div>
       </div>
       <span>repeating-linear-gradient</span>
     </li>
     <li>
+      <header>class: rainbow rainbow-txt</header>
       <div class="cont">
           <div class="rainbow rainbow-txt" style="--height:100px;">
             rainbow
@@ -87,6 +93,13 @@
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
     }
+    li>header{
+      position: absolute;
+      top:0;
+      width: 100%;
+      left:0;
+      color:#c5c3c3;
+    }
     li>span{
       position: absolute;
       width: 100%;
@@ -94,7 +107,7 @@
       height:50px;
       bottom:0;
       left:0;
-      color:#fff;
+      color:#6d6d6d;
     }
     .style{
       position: relative;

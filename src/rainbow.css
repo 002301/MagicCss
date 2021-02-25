@@ -1,11 +1,11 @@
-.rainbow{
+.rainbow-line{
   width: 100%;
   height: var(--height);
   background:repeating-linear-gradient(#fe6843 0% 14%,#fed538 14% 28%,#fcfa3f 28% 42%,#1cf891 42% 56%,#1ffafc 56% 70%,#21b3f9 70% 84%,#8b63cf 84% 98%,#a650a3);
   /* background-size: 100% 100%; */
   animation: rainAni 10s linear infinite;
 }
-.rainbow-line{
+.rainbow{
   width: 100%;
   height: var(--height);
   background:repeating-linear-gradient(#fe6843,#fed538,#fcfa3f,#1cf891,#1ffafc,#21b3f9,#8b63cf,#a650a3,#fe6843);
